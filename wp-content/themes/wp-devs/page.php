@@ -9,19 +9,8 @@
                 <div class="page-item">
                     <?php
                     while (have_posts()): the_post();
-                    ?>
-                        <article>
-                            <header>
-                                <h2><?php the_title(); ?></h2>
-                            </header>
 
-
-
-                            <?php the_content(); ?>
-                            <?php wp_link_pages(); ?>
-                        </article>
-
-                    <?php
+                        get_template_part('parts/content', 'page');
                         if (comments_open() || get_comments_number()) {
                             comments_template();
                         }
