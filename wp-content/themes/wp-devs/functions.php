@@ -10,7 +10,6 @@ function wpdevs_load_scripts()
 add_action('wp_enqueue_scripts', 'wpdevs_load_scripts');
 
 
-
 function wpdevs_config()
 {
     // Instantiate Nav Menus
@@ -21,13 +20,14 @@ function wpdevs_config()
         )
     );
 
-    $args = array(
+    //Header image dimensions
+    $header_args = array(
         'height' => 225,
         'width' => 1920
     );
 
 
-    add_theme_support('custom-header', $args);
+    add_theme_support('custom-header', $header_args);
     add_theme_support('post-thumbnails');
     add_theme_support('custom-logo', array(
         'width' => 200,
@@ -35,6 +35,9 @@ function wpdevs_config()
         'flex-height' => true,
         'flex-width' => true
     ));
+
+    // 404 page
+    add_theme_support('title-tag');
 }
 
 add_action('after_setup_theme', 'wpdevs_config', 0);
