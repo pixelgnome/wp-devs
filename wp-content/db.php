@@ -1,0 +1,1 @@
+/Users/sfilippone/Local Sites/my-site/app/public/wp-content/plugins/query-monitor/wp-content/db.php
