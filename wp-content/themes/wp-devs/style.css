@@ -654,8 +654,8 @@ img {
 
 /* Hero */
 .hero {
-  background-size: cover;
-  background-position: center center;
+  background-size: cover !important;
+  background-position: center center !important;
   color: #ffffff;
   text-align: center;
 }
