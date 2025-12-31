@@ -5,7 +5,9 @@
     <div id="primary" class="content-area">
         <main id="main" class="site-main">
 
-            <h1>Blog</h1>
+            <h1>
+                <?php _e('Blog', 'wp-devs') ?>
+            </h1>
             <div class="container">
                 <div class="blog-items">
                     <?php
@@ -15,11 +17,11 @@
                         endwhile;
                     ?>
                         <div class="wpdevs-pagination">
-                            <div class="pages new"><?php previous_posts_link('<< Previous') ?></div>
-                            <div class="pages old"><?php next_posts_link('Next >>') ?></div>
+                            <div class="pages new"><?php previous_posts_link(__('&laquo; Previous', 'wp-dev')) ?></div>
+                            <div class="pages old"><?php next_posts_link(__('Older &raquo;', 'wp-dev')) ?></div>
                         </div>
                     <?php else: ?>
-                        <p>Nothing yet to be displayed!</p>
+                        <p><?php _e('Nothing yet to be displayed!', 'wp-devs') ?></p>
                     <?php endif; ?>
                 </div>
                 <?php get_sidebar() ?>

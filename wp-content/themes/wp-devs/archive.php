@@ -15,11 +15,11 @@
                         endwhile;
                     ?>
                         <div class="wpdevs-pagination">
-                            <div class="pages new"><?php previous_posts_link('<< Previous') ?></div>
-                            <div class="pages old"><?php next_posts_link('Next >>') ?></div>
+                            <div class="pages new"><?php previous_posts_link(__('<< Previous', 'wp-devs')) ?></div>
+                            <div class="pages old"><?php next_posts_link(__('Next >>', 'wp-devs')) ?></div>
                         </div>
                     <?php else: ?>
-                        <p>Nothing yet to be displayed!</p>
+                        <p><?php _e('Nothing yet to be displayed!', 'wp-devs') ?></p>
                     <?php endif; ?>
                 </div>
                 <?php get_sidebar() ?>

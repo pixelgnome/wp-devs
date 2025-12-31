@@ -5,9 +5,9 @@
         <main id="main" class="site-main">
             <?php
             // Pull info for hero
-            $hero_title = get_theme_mod('set_hero_title', 'Title');
-            $hero_subtitle = get_theme_mod('set_hero_subtitle', 'This is a sentence.');
-            $hero_button_text = get_theme_mod('set_hero_button_text', 'Click here &raquo;');
+            $hero_title = get_theme_mod('set_hero_title', __('Title', 'wp-dev'));
+            $hero_subtitle = get_theme_mod('set_hero_subtitle', __('This is a sentence.', 'wp-dev'));
+            $hero_button_text = get_theme_mod('set_hero_button_text', __('Click here &raquo;', 'wp-dev'));
             $hero_button_link = get_theme_mod('set_hero_button_link', '#');
             $hero_height = get_theme_mod('set_hero_height', 850);
             $hero_background = wp_get_attachment_url(get_theme_mod('set_hero_background_image'));
@@ -24,7 +24,9 @@
                 </div>
             </section>
             <section class="services">
-                <h2>Services</h2>
+                <h2>
+                    <?php _e('Services', 'wp-devs') ?>
+                </h2>
                 <div class="container">
                     <div class="services-item">
                         <?php
@@ -50,7 +52,7 @@
                 </div>
             </section>
             <section class="home-blog">
-                <h2>Latest News</h2>
+                <h2> <?php _e('Latest News', 'wp-devs') ?></h2>
                 <div class="container">
                     <?php
                     $per_page = get_theme_mod('set_per_page', 3);
@@ -74,7 +76,7 @@
                         //Call this function -> it ensures that this query will not affect any other loops or if you reuse on same page
                         wp_reset_postdata();
                     else: ?>
-                        <p>Nothing yet to be displayed!</p>
+                        <p><?php _e('Nothing yet to be displayed!', 'wp-devs') ?></p>
                     <?php endif; ?>
 
                 </div>
