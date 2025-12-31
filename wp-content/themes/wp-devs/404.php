@@ -9,15 +9,16 @@
             <div class="container">
                 <div class="error-404">
                     <header>
-                        <h1>Page not found</h1>
-                        <p>This page does not exist.</p>
+                        <h1><?php _e('Page not Found', 'wp-dev'); ?></h1>
+                        <p><?php _e('Unfortunately this page does not exist.', 'wp-dev'); ?></p>
                     </header>
                     <div class="error">
+                        <p><?php _e('How about trying a search?', 'wp-dev'); ?></p>
                         <?php get_search_form(); ?>
                         <?php the_widget(
                             'WP_Widget_Recent_Posts',
                             array(
-                                'title' => 'Recent Posts',
+                                'title' => __('Recent Posts', 'wp-devs'),
                                 'number' => 3
                             )
                         ); ?>

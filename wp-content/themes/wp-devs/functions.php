@@ -14,11 +14,15 @@ add_action('wp_enqueue_scripts', 'wpdevs_load_scripts');
 
 function wpdevs_config()
 {
+    // Internationalization
+    $textdomain = 'wp-devs';
+    load_theme_textdomain($textdomain, get_template_directory() . '/languages');
+
     // Instantiate Nav Menus
     register_nav_menus(
         array(
-            'wp_devs_main_menu' => 'Main Menu',
-            'wp_devs_footer_menu' => 'Footer Menu'
+            'wp_devs_main_menu' => __('Main Menu', 'wp-devs'),
+            'wp_devs_footer_menu' => __('Footer Menu', 'wp-devs'),
         )
     );
 
@@ -55,9 +59,9 @@ function wpdevs_sidebars()
 {
     register_sidebar(
         array(
-            'name' => 'Blog Sidebar',
+            'name' => __('Blog Sidebar', 'wp-devs'),
             'id' => 'sidebar-blog',
-            'description' => 'This is the blog sidebar. Add widgets here.',
+            'description' => __('This is the blog sidebar. Add widgets here.', 'wp-devs'),
             'before_widget' => '<div class="widget-wrapper">',
             'after_widget' => '</div>',
             'before_title' => '<h4 class="widget_title">',
@@ -68,9 +72,12 @@ function wpdevs_sidebars()
     // Services 1, 2, 3
     register_sidebar(
         array(
-            'name' => 'Services 1',
+            'name' => __('Services 1', 'wp-devs'),
             'id' => 'services-1',
-            'description' => 'First Service Area.',
+            'description' => __(
+                'First Service Area.',
+                'wp-devs'
+            ),
             'before_widget' => '<div class="widget-wrapper">',
             'after_widget' => '</div>',
             'before_title' => '<h4 class="widget_title">',
@@ -80,9 +87,12 @@ function wpdevs_sidebars()
 
     register_sidebar(
         array(
-            'name' => 'Services 2',
+            'name' => __('Services 2', 'wp-devs'),
             'id' => 'services-2',
-            'description' => 'Second Service Area.',
+            'description' => __(
+                'Second Service Area.',
+                'wp-devs'
+            ),
             'before_widget' => '<div class="widget-wrapper">',
             'after_widget' => '</div>',
             'before_title' => '<h4 class="widget_title">',
@@ -91,9 +101,12 @@ function wpdevs_sidebars()
     );
     register_sidebar(
         array(
-            'name' => 'Services 3',
+            'name' => __('Services 3', 'wp-devs'),
             'id' => 'services-3',
-            'description' => 'Third Service Area.',
+            'description' => __(
+                'Third Service Area.',
+                'wp-devs'
+            ),
             'before_widget' => '<div class="widget-wrapper">',
             'after_widget' => '</div>',
             'before_title' => '<h4 class="widget_title">',
@@ -108,10 +121,3 @@ if (! function_exists('wp_body_open')) {
         do_action('wp_body_open');
     }
 }
-
-// if (! function_exists('wp_body_open')) {
-//     function wp_body_open()
-//     {
-//         do_action('wp_body_open');
-//     }
-// }
