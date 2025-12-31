@@ -5,12 +5,13 @@
         <a href=<?php the_permalink() ?>"><?php the_post_thumbnail(array(275, 275)); ?></a>
     <?php endif; ?>
     <div class="meta-info">
-        <p>Posted in <?php echo get_the_date(); ?> by <?php the_author_posts_link(); ?></p>
+
+        <p><?php esc_html_e('Posted in', 'wp-devs') ?> <?php echo get_the_date(); ?> <?php _e('by', 'wp-devs') ?> <?php the_author_posts_link(); ?></p>
         <?php if (has_category()): ?>
-            <p>Categories: <?php the_category(''); ?></p>
+            <p><?php esc_html_e('Categories', 'wp-devs') ?>: <?php the_category(''); ?></p>
         <?php endif; ?>
         <?php if (has_tag()): ?>
-            <p>Posted in by <?php the_tags('', ', '); ?></p>
+            <p><?php esc_html_e('Posted in by', 'wp-devs') ?>: <?php the_tags('', ', '); ?></p>
         <?php endif; ?>
         <?php the_excerpt(); ?>
     </div>

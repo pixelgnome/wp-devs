@@ -24,7 +24,7 @@
                             the_custom_logo();
                         } else {
                         ?>
-                            <a href="<?php echo site_url('/'); ?>"><span><?php bloginfo('name'); ?></span></a>
+                            <a href="<?php echo esc_url(site_url('/')); ?>"><span><?php bloginfo('name'); ?></span></a>
                         <?php
                         }
                         ?>

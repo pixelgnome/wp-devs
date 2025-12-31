@@ -3,14 +3,14 @@
      <h3><a href=<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
      <div class="meta-info">
          <p>
-             <?php _e('by', 'wp-devs') ?> <span><?php the_author_posts_link(); ?></span>
+             <?php esc_html_e('by', 'wp-devs') ?> <span><?php the_author_posts_link(); ?></span>
              <?php if (has_category()): ?>
-                 <?php _e('Categories', 'wp-devs') ?>: <span><?php the_category(''); ?></span>
+                 <?php esc_html_e('Categories', 'wp-devs') ?>: <span><?php the_category(''); ?></span>
              <?php endif; ?>
              <?php if (has_tag()): ?>
-                 <?php _e('Tags', 'wp-devs') ?>: <span><?php the_tags('', ', '); ?></span>
+                 <?php esc_html_e('Tags', 'wp-devs') ?>: <span><?php the_tags('', ', '); ?></span>
              <?php endif; ?>
-         <p><span><?php echo get_the_date(); ?></span></p>
+         <p><span><?php echo esc_html(get_the_date()); ?></span></p>
          </p>
          <?php the_excerpt(); ?>
      </div>

@@ -21,8 +21,8 @@ function wpdevs_config()
     // Instantiate Nav Menus
     register_nav_menus(
         array(
-            'wp_devs_main_menu' => __('Main Menu', 'wp-devs'),
-            'wp_devs_footer_menu' => __('Footer Menu', 'wp-devs'),
+            'wp_devs_main_menu' => esc_html__('Main Menu', 'wp-devs'),
+            'wp_devs_footer_menu' => esc_html__('Footer Menu', 'wp-devs'),
         )
     );
 
@@ -59,9 +59,9 @@ function wpdevs_sidebars()
 {
     register_sidebar(
         array(
-            'name' => __('Blog Sidebar', 'wp-devs'),
+            'name' => esc_html__('Blog Sidebar', 'wp-devs'),
             'id' => 'sidebar-blog',
-            'description' => __('This is the blog sidebar. Add widgets here.', 'wp-devs'),
+            'description' => esc_html__('This is the blog sidebar. Add widgets here.', 'wp-devs'),
             'before_widget' => '<div class="widget-wrapper">',
             'after_widget' => '</div>',
             'before_title' => '<h4 class="widget_title">',
@@ -72,9 +72,9 @@ function wpdevs_sidebars()
     // Services 1, 2, 3
     register_sidebar(
         array(
-            'name' => __('Services 1', 'wp-devs'),
+            'name' => esc_html__('Services 1', 'wp-devs'),
             'id' => 'services-1',
-            'description' => __(
+            'description' => esc_html__(
                 'First Service Area.',
                 'wp-devs'
             ),
@@ -87,9 +87,9 @@ function wpdevs_sidebars()
 
     register_sidebar(
         array(
-            'name' => __('Services 2', 'wp-devs'),
+            'name' => esc_html__('Services 2', 'wp-devs'),
             'id' => 'services-2',
-            'description' => __(
+            'description' => esc_html__(
                 'Second Service Area.',
                 'wp-devs'
             ),
@@ -101,9 +101,9 @@ function wpdevs_sidebars()
     );
     register_sidebar(
         array(
-            'name' => __('Services 3', 'wp-devs'),
+            'name' => esc_html__('Services 3', 'wp-devs'),
             'id' => 'services-3',
-            'description' => __(
+            'description' => esc_html__(
                 'Third Service Area.',
                 'wp-devs'
             ),
