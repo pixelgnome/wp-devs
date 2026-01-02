@@ -396,37 +396,38 @@ template {
   box-sizing: border-box;
 }
 body {
-  font-family: "Poppins", sans-serif;
   font:
-    normal,
-    21px/2.1rem,
-    "Poppins",
+    normal 400 18px/2.1rem "Arimo",
     sans-serif;
 }
 h1 {
+  font-family: "Arimo", sans-serif;
   font-size: 66px;
   line-height: 70px;
 }
 h2 {
+  font-family: "Arimo", sans-serif;
   font-size: 40px;
   line-height: 4rem;
-  font-weight: bold;
-  text-transform: uppercase;
+  font-weight: 700;
 }
 h3 {
+  font-family: "Arimo", sans-serif;
   font-size: 36px;
   line-height: 3.6rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 h4 {
+  font-family: "Arimo", sans-serif;
   font-size: 28px;
   line-height: 2.8rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 h5 {
+  font-family: "Arimo", sans-serif;
   font-size: 22px;
   line-height: 2.2rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 p {
   font-size: 15px;
@@ -654,8 +655,8 @@ img {
 
 /* Hero */
 .hero {
-  background-size: cover !important;
-  background-position: center center !important;
+  background-size: cover;
+  background-position: center center;
   color: #ffffff;
   text-align: center;
 }
@@ -670,7 +671,7 @@ img {
 }
 .hero .hero-items h1 {
   margin-top: 0;
-  font-weight: normal;
+  font-weight: 600;
 }
 .hero .hero-items a {
   color: #ffffff;
@@ -678,6 +679,7 @@ img {
   display: inline-block;
   background: var(--wpdevs-light-blue);
   margin: 20px 0 0;
+  border-radius: 8px;
 }
 .hero .hero-items a:hover {
   background: var(--wpdevs-yellow);
@@ -716,9 +718,9 @@ img {
   content: "";
   position: absolute;
   background-color: var(--wpdevs-light-blue);
-  width: 35px;
-  height: 5px;
-  right: calc(50% - 15px);
+  width: 100px;
+  height: 2px;
+  right: calc(50% - 50px);
   bottom: 0;
 }
 .services h4 {
@@ -754,9 +756,9 @@ img {
   content: "";
   position: absolute;
   background-color: var(--wpdevs-light-blue);
-  width: 35px;
-  height: 5px;
-  right: calc(50% - 15px);
+  width: 100px;
+  height: 2px;
+  right: calc(50% - 50px);
   bottom: 0;
 }
 .home .home-blog .latest-news {
@@ -775,12 +777,37 @@ img {
   line-height: 2.6rem;
 }
 .home .home-blog .meta-info p {
-  font-weight: normal;
+  font-weight: 600;
   margin-bottom: 0;
 }
 .home .home-blog .meta-info p:last-child {
   margin-top: 5px;
 }
+
+.home .home-blog .meta-info .meta-categories {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home .home-blog .meta-info .meta-title {
+  font-weight: 600;
+  color: #000;
+}
+
+.home .home-blog .meta-info .post-categories {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  list-style: none;
+  padding: 0;
+  margin: 0.5em 0;
+}
+
+.post-categories li {
+  margin: 0 8px 0 0;
+}
+
 .home .home-blog span,
 .home .home-blog span a {
   color: var(--wpdevs-gray1);
@@ -870,6 +897,21 @@ footer .container .row {
   height: 100%;
   width: 30%;
 }
+.archive-items .meta-info .post-categories,
+.blog-items .meta-info .post-categories {
+  display: inline-block;
+}
+
+aside.sidebar {
+  border-radius: 8px;
+}
+
+aside.sidebar h4.wp-block-heading {
+  line-height: 1.5rem;
+  font-size: 22px;
+  margin: 0.5rem 0 1rem;
+}
+
 @media screen and (max-width: 991px) {
   .blog aside,
   .archive aside,

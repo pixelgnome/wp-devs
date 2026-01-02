@@ -12,7 +12,7 @@
             $hero_height = get_theme_mod('set_hero_height', 850);
             $hero_background = wp_get_attachment_url(get_theme_mod('set_hero_background_image'));
             ?>
-            <section class="hero" style="background: url('<?php echo esc_url($hero_background) ?>');">
+            <section class="hero" style="background-image: url('<?php echo esc_url($hero_background) ?>');">
                 <div class="overlay" style="min-height: <?php echo esc_attr($hero_height) ?>px;">
                     <div class="container">
                         <div class="hero-items">
