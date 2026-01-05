@@ -790,7 +790,8 @@ img {
   justify-content: center;
 }
 
-.home .home-blog .meta-info .meta-title {
+.home .home-blog .meta-info .meta-title,
+.meta-info .meta-title {
   font-weight: 600;
   color: #000;
 }
