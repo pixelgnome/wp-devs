@@ -4,8 +4,10 @@
 /wp-content/themes/twentytwenty
 /wp-content/themes/twentytwentyfive
 /wp-content/themes/twentytwentyone
+/node_modules/
 /wp-content/plugins
 /node_modules/
+/wp-content/themes/tw-devs/node_modules/
 /wp-includes/
 /wp-admin/
 

@@ -16,8 +16,8 @@
     ?>
     <div id="page" class="site">
         <header>
-            <section class="top-bar">
-                <div class="container">
+            <section class="top-bar bg-white text-black py-[15px]">
+                <div class="container flex items-center justify-between">
                     <div class="logo">
                         <?php
                         if (has_custom_logo()) {
