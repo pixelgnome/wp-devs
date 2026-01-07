@@ -1,1 +1,18 @@
 @import "tailwindcss";
+
+@theme {
+  --color-wpdevs-deep-blue: #213c4d;
+  --color-wpdevs-gray1: #7c7c7c;
+  --color-wpdevs-gray2: #f7f7f7;
+  --color-wpdevs-gray3: #dddddd;
+  --color-wpdevs-light-blue: #2a92d3;
+  --color-wpdevs-deep-blue: #213c4d;
+  --color-wpdevs-black-blue: #001e32;
+  --color-wpdevs-yellow: #cfaf07;
+}
+
+@tailwind utilities;
+
+#menu-main-menu {
+  @apply flex gap-8 justify-center items-center font-bold text-lg py-4;
+}

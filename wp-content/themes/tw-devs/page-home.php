@@ -18,13 +18,13 @@
                         <div class="hero-items justify-center align-middle py-[25px]">
                             <h1 class="mb-4 text-4xl font-bold tracking-tight text-heading md:text-5xl lg:text-6xl "><?php echo esc_html($hero_title) ?></h1>
                             <p class="mb-6 text-lg font-normal text-body lg:text-xl sm:px-16 xl:px-48"><?php echo nl2br(esc_html($hero_subtitle)) ?></p>
-                            <a class="inline-flex items-center text-white bg-blue-300 box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-base px-5 py-3 focus:outline-none" href="<?php echo esc_url($hero_button_link) ?>"><?php echo esc_html($hero_button_text) ?></a>
+                            <a class="inline-flex items-center text-white bg-blue-800 rounded-lg box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-base px-5 py-3 focus:outline-none" href="<?php echo esc_url($hero_button_link) ?>"><?php echo esc_html($hero_button_text) ?></a>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="services">
-                <h2>
+            <section class="services bg-wpdevs-deep-blue p-8 text-white text-center">
+                <h2 class="text-4xl font-bold mb-4">
                     <?php esc_html_e('Services', 'wp-devs') ?>
                 </h2>
                 <div class="containor w-full ml-auto mr-auto flex items-center justify-between max-w-[1140px]">
@@ -51,8 +51,8 @@
                     </div>
                 </div>
             </section>
-            <section class="home-blog">
-                <h2> <?php esc_html_e('Latest News', 'wp-devs') ?></h2>
+            <section class="home-blog text-center p-8">
+                <h2 class="text-4xl font-bold mb-4"> <?php esc_html_e('Latest News', 'wp-devs') ?></h2>
                 <div class="containor w-full ml-auto mr-auto flex items-center justify-between max-w-[1140px]">
                     <?php
                     $per_page = get_theme_mod('set_per_page', 3);
