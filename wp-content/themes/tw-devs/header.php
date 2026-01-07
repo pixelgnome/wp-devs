@@ -14,10 +14,10 @@
     <?php body_class(); ?>>
     <?php wp_body_open(); //mandatory function 
     ?>
-    <div id="page" class="site">
+    <div id="page" class="site font-sans">
         <header>
-            <section class="top-bar bg-white text-black py-8">
-                <div class="container flex items-center justify-between">
+            <section class="top-bar bg-white text-black py-[15px]">
+                <div class="containor w-full ml-auto mr-auto flex items-center justify-between max-w-[1140px]">
                     <div class="logo">
                         <?php
                         if (has_custom_logo()) {
@@ -36,8 +36,8 @@
 
             </section>
             <?php if (! is_page('landing-page')): ?>
-                <section class="menu-area bg-gray-900 h-8">
-                    <div class="container">
+                <section class="menu-area h-[55px] bg-gray-400">
+                    <div class="containor w-full ml-auto mr-auto ">
                         <nav class="main-menu">
                             <button class="check-button">
                                 <div class="menu-icon">

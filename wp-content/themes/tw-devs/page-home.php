@@ -14,11 +14,11 @@
             ?>
             <section class="hero" style="background-image: url('<?php echo esc_url($hero_background) ?>');">
                 <div class="overlay" style="min-height: <?php echo esc_attr($hero_height) ?>px;">
-                    <div class="container">
-                        <div class="hero-items">
-                            <h1><?php echo esc_html($hero_title) ?></h1>
-                            <p><?php echo nl2br(esc_html($hero_subtitle)) ?></p>
-                            <a href="<?php echo esc_url($hero_button_link) ?>"><?php echo esc_html($hero_button_text) ?></a>
+                    <div class="containor w-full ml-auto mr-auto flex items-center justify-between max-w-[1140px]">
+                        <div class="hero-items justify-center align-middle">
+                            <h1 class="text-center mb-4 text-4xl font-bold tracking-tight text-heading md:text-5xl lg:text-6xl "><?php echo esc_html($hero_title) ?></h1>
+                            <p class="text-center mb-6 text-lg font-normal text-body lg:text-xl sm:px-16 xl:px-48"><?php echo nl2br(esc_html($hero_subtitle)) ?></p>
+                            <a class="text-center inline-flex items-center text-white bg-blue-300 box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-base px-5 py-3 focus:outline-none" href="<?php echo esc_url($hero_button_link) ?>"><?php echo esc_html($hero_button_text) ?></a>
                         </div>
                     </div>
                 </div>
@@ -27,7 +27,7 @@
                 <h2>
                     <?php esc_html_e('Services', 'wp-devs') ?>
                 </h2>
-                <div class="container">
+                <div class="containor w-full ml-auto mr-auto flex items-center justify-between max-w-[1140px]">
                     <div class="services-item">
                         <?php
                         if (is_active_sidebar('services-1')) {
@@ -53,7 +53,7 @@
             </section>
             <section class="home-blog">
                 <h2> <?php esc_html_e('Latest News', 'wp-devs') ?></h2>
-                <div class="container">
+                <div class="containor w-full ml-auto mr-auto flex items-center justify-between max-w-[1140px]">
                     <?php
                     $per_page = get_theme_mod('set_per_page', 3);
                     $category_include = get_theme_mod('set_category_include');
