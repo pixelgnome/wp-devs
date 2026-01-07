@@ -16,7 +16,7 @@
     ?>
     <div id="page" class="site">
         <header>
-            <section class="top-bar bg-white text-black py-[15px]">
+            <section class="top-bar bg-white text-black py-8">
                 <div class="container flex items-center justify-between">
                     <div class="logo">
                         <?php
@@ -36,7 +36,7 @@
 
             </section>
             <?php if (! is_page('landing-page')): ?>
-                <section class="menu-area">
+                <section class="menu-area bg-gray-900 h-8">
                     <div class="container">
                         <nav class="main-menu">
                             <button class="check-button">
