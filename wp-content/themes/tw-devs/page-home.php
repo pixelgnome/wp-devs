@@ -12,13 +12,13 @@
             $hero_height = get_theme_mod('set_hero_height', 850);
             $hero_background = wp_get_attachment_url(get_theme_mod('set_hero_background_image'));
             ?>
-            <section class="hero" style="background-image: url('<?php echo esc_url($hero_background) ?>');">
-                <div class="overlay" style="min-height: <?php echo esc_attr($hero_height) ?>px;">
+            <section class="hero text-center bg-center bg-cover text-white" style="background-image: url('<?php echo esc_url($hero_background) ?>');">
+                <div class="overlay flex bg-gray-600/30" style="min-height: <?php echo esc_attr($hero_height) ?>px;">
                     <div class="containor w-full ml-auto mr-auto flex items-center justify-between max-w-[1140px]">
-                        <div class="hero-items justify-center align-middle">
-                            <h1 class="text-center mb-4 text-4xl font-bold tracking-tight text-heading md:text-5xl lg:text-6xl "><?php echo esc_html($hero_title) ?></h1>
-                            <p class="text-center mb-6 text-lg font-normal text-body lg:text-xl sm:px-16 xl:px-48"><?php echo nl2br(esc_html($hero_subtitle)) ?></p>
-                            <a class="text-center inline-flex items-center text-white bg-blue-300 box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-base px-5 py-3 focus:outline-none" href="<?php echo esc_url($hero_button_link) ?>"><?php echo esc_html($hero_button_text) ?></a>
+                        <div class="hero-items justify-center align-middle py-[25px]">
+                            <h1 class="mb-4 text-4xl font-bold tracking-tight text-heading md:text-5xl lg:text-6xl "><?php echo esc_html($hero_title) ?></h1>
+                            <p class="mb-6 text-lg font-normal text-body lg:text-xl sm:px-16 xl:px-48"><?php echo nl2br(esc_html($hero_subtitle)) ?></p>
+                            <a class="inline-flex items-center text-white bg-blue-300 box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-base px-5 py-3 focus:outline-none" href="<?php echo esc_url($hero_button_link) ?>"><?php echo esc_html($hero_button_text) ?></a>
                         </div>
                     </div>
                 </div>
