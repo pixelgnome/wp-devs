@@ -20,3 +20,68 @@
 #menu-footer-menu {
   @apply flex gap-8 py-4;
 }
+
+.home-blog .container article:first-child {
+  grid-area: feat-item;
+}
+.home-blog .container {
+  display: grid;
+  grid-template-areas: "feat-item feat-item";
+  grid-gap: 25px;
+}
+
+.home .home-blog .latest-news {
+  text-align: center;
+}
+.home .home-blog .col-12 .latest-news {
+  margin-bottom: 40px;
+}
+.home .home-blog .latest-news img {
+  float: none !important;
+  margin: 0 0 25px 0 !important;
+}
+.home .home-blog .latest-news h3 {
+  color: #000000;
+  margin: 0;
+  line-height: 2.6rem;
+}
+.home .home-blog .meta-info p {
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.home .home-blog .meta-info p:last-child {
+  margin-top: 5px;
+}
+
+.home .home-blog .meta-info .meta-categories {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home .home-blog .meta-info .meta-title,
+.meta-info .meta-title {
+  font-weight: 600;
+  color: #000;
+}
+
+.home .home-blog .meta-info .post-categories {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  list-style: none;
+  padding: 0;
+  margin: 0.5em 0;
+}
+
+.post-categories li {
+  margin: 0 8px 0 0;
+}
+
+.home .home-blog span,
+.home .home-blog span a {
+  color: var(--wpdevs-gray1);
+  font-weight: normal;
+  text-decoration: none;
+  margin: 0 2px 0 0;
+}

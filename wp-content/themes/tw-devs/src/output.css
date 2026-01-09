@@ -36,6 +36,7 @@
     --default-mono-font-family: var(--font-mono);
     --color-wpdevs-deep-blue: #213c4d;
     --color-wpdevs-gray2: #f7f7f7;
+    --color-wpdevs-light-blue: #2a92d3;
   }
 }
 @layer base {
@@ -234,6 +235,9 @@
   .flex {
     display: flex;
   }
+  .grid {
+    display: grid;
+  }
   .hidden {
     display: none;
   }
@@ -324,6 +328,9 @@
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
+  .py-12 {
+    padding-block: calc(var(--spacing) * 12);
+  }
   .py-\[15px\] {
     padding-block: 15px;
   }
@@ -376,6 +383,18 @@
   }
   .text-white {
     color: var(--color-white);
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .decoration-wpdevs-light-blue {
+    text-decoration-color: var(--color-wpdevs-light-blue);
+  }
+  .decoration-2 {
+    text-decoration-thickness: 2px;
+  }
+  .underline-offset-8 {
+    text-underline-offset: 8px;
   }
   .shadow-xs {
     --tw-shadow: 0 1px 2px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.05));
@@ -460,6 +479,62 @@
   display: flex;
   gap: calc(var(--spacing) * 8);
   padding-block: calc(var(--spacing) * 4);
+}
+.home-blog .container article:first-child {
+  grid-area: feat-item;
+}
+.home-blog .container {
+  display: grid;
+  grid-template-areas: "feat-item feat-item";
+  grid-gap: 25px;
+}
+.home .home-blog .latest-news {
+  text-align: center;
+}
+.home .home-blog .col-12 .latest-news {
+  margin-bottom: 40px;
+}
+.home .home-blog .latest-news img {
+  float: none !important;
+  margin: 0 0 25px 0 !important;
+}
+.home .home-blog .latest-news h3 {
+  color: #000000;
+  margin: 0;
+  line-height: 2.6rem;
+}
+.home .home-blog .meta-info p {
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.home .home-blog .meta-info p:last-child {
+  margin-top: 5px;
+}
+.home .home-blog .meta-info .meta-categories {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home .home-blog .meta-info .meta-title, .meta-info .meta-title {
+  font-weight: 600;
+  color: #000;
+}
+.home .home-blog .meta-info .post-categories {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  list-style: none;
+  padding: 0;
+  margin: 0.5em 0;
+}
+.post-categories li {
+  margin: 0 8px 0 0;
+}
+.home .home-blog span, .home .home-blog span a {
+  color: var(--wpdevs-gray1);
+  font-weight: normal;
+  text-decoration: none;
+  margin: 0 2px 0 0;
 }
 @property --tw-border-style {
   syntax: "*";
