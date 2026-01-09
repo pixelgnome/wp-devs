@@ -16,3 +16,7 @@
 #menu-main-menu {
   @apply flex gap-8 justify-center items-center font-bold text-lg py-4;
 }
+
+#menu-footer-menu {
+  @apply flex gap-8 py-4;
+}

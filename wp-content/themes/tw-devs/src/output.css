@@ -10,7 +10,6 @@
     --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-blue-700: oklch(48.8% 0.243 264.376);
     --color-blue-800: oklch(42.4% 0.199 265.638);
-    --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-600: oklch(44.6% 0.03 256.802);
     --color-black: #000;
     --color-white: #fff;
@@ -36,7 +35,6 @@
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --color-wpdevs-deep-blue: #213c4d;
-    --color-wpdevs-gray1: #7c7c7c;
     --color-wpdevs-gray2: #f7f7f7;
   }
 }
@@ -290,9 +288,6 @@
   .bg-blue-800 {
     background-color: var(--color-blue-800);
   }
-  .bg-gray-200 {
-    background-color: var(--color-gray-200);
-  }
   .bg-gray-600\/30 {
     background-color: color-mix(in srgb, oklch(44.6% 0.03 256.802) 30%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -304,9 +299,6 @@
   }
   .bg-wpdevs-deep-blue {
     background-color: var(--color-wpdevs-deep-blue);
-  }
-  .bg-wpdevs-gray1 {
-    background-color: var(--color-wpdevs-gray1);
   }
   .bg-wpdevs-gray2 {
     background-color: var(--color-wpdevs-gray2);
@@ -463,6 +455,11 @@
   line-height: var(--tw-leading, var(--text-lg--line-height));
   --tw-font-weight: var(--font-weight-bold);
   font-weight: var(--font-weight-bold);
+}
+#menu-footer-menu {
+  display: flex;
+  gap: calc(var(--spacing) * 8);
+  padding-block: calc(var(--spacing) * 4);
 }
 @property --tw-border-style {
   syntax: "*";

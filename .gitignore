@@ -4,6 +4,8 @@
 /wp-content/themes/twentytwenty
 /wp-content/themes/twentytwentyfive
 /wp-content/themes/twentytwentyone
+/wp-content/themes/spotlight-js-convert
+/wp-content/litespeed
 /node_modules/
 /wp-content/plugins
 /node_modules/
@@ -23,3 +25,4 @@ uploads/
 wp-*.php
 .htaccess
 xmlrpc.php
+/wp-content/.DS_Store
