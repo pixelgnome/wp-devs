@@ -161,3 +161,133 @@ h5 {
 .nav-links .prev {
   @apply pl-0;
 }
+
+************** INNER PAGES *****************/
+
+/* Blog, Archive, Search */
+.blog main .container,
+.archive main .container {
+  @apply flex;
+}
+.blog .blog-items,
+.archive .archive-items {
+  @apply pr-4 pt-0 pb-0 pl-0 flex-1;
+}
+.blog .blog-items h2,
+.archive .blog-items h2 {
+  @apply mt-0;
+}
+.blog article {
+  @apply mb-5;
+}
+.blog aside,
+.archive aside {
+  @apply p-6 bg-wpdevs-gray2 h-full w-1/3;
+}
+.archive-items .meta-info .post-categories,
+.blog-items .meta-info .post-categories {
+  @apply inline-block;
+}
+
+aside.sidebar {
+  @apply rounded-r-lg;
+}
+
+aside.sidebar h2.wp-block-heading {
+  @apply text-2xl/relaxed mt-4 mr-0 mb-1;
+}
+
+@media screen and (max-width: 991px) {
+  .blog aside,
+  .archive aside,
+  .blog .blog-items,
+  .archive .archive-items {
+    @apply min-w-full;
+  }
+}
+.blog h1,
+.archive h1 {
+  text-align: center;
+  margin-top: 0;
+}
+.archive-description {
+  text-align: center;
+  max-width: 50%;
+  margin: 0 auto 30px auto;
+}
+.archive-description p {
+  font-size: 85%;
+}
+.home #primary > #main {
+  padding: 0;
+}
+#primary > #main {
+  padding: var(--wpdevs-big-padding);
+}
+@media screen and (max-width: 991px) {
+  #primary > #main {
+    padding: var(--wpdevs-mobile-padding);
+  }
+}
+.meta-info p {
+  margin: 0;
+}
+.wp-post-image {
+  float: left;
+  margin: 0 15px 10px 0;
+}
+@media screen and (max-width: 550px) {
+  .wp-post-image {
+    width: 100%;
+  }
+}
+article {
+  display: inline-block;
+  width: 100%;
+}
+article.post h1,
+.search h1,
+.archive h1 {
+  font-size: 50px;
+  line-height: 4rem;
+  margin-bottom: 15px;
+}
+article.post h2 {
+  line-height: 3rem;
+  text-transform: none;
+}
+article h2 {
+  line-height: 3rem;
+  margin-bottom: 10px;
+  text-transform: none;
+}
+article.post h3,
+article.post h4,
+article.post h5 {
+  margin-bottom: 0;
+}
+.searchform input[type="text"] {
+  padding: 7px 10px;
+  border: 1px solid #c6c6c6;
+}
+.searchform input[type="submit"] {
+  padding: 11px 10px;
+  background: #000000;
+  color: #ffffff;
+  border: none;
+}
+.searchform div {
+  display: flex;
+}
+.searchform input[type="text"] {
+  max-width: 70%;
+}
+.searchform input[type="submit"] {
+  max-width: 70%;
+}
+@media (max-width: 991px) {
+  .blog .container,
+  .archive .container {
+    flex-wrap: wrap;
+  }
+}
