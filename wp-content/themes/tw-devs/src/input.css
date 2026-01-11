@@ -13,12 +13,24 @@
 
 @tailwind utilities;
 
+.container {
+  @apply w-full ml-auto mr-auto max-w-[1140px];
+}
+
 #menu-main-menu {
-  @apply flex gap-8 justify-center items-center font-bold text-lg py-4;
+  @apply flex gap-8 justify-center items-center text-lg py-4;
 }
 
 #menu-footer-menu {
   @apply flex gap-8 py-4;
+}
+
+.menu-item {
+  @apply font-normal;
+}
+
+.menu-item.current-menu-item {
+  @apply font-bold;
 }
 
 .home-blog .container article:first-child {
@@ -31,57 +43,44 @@
 }
 
 .home .home-blog .latest-news {
-  text-align: center;
+  @apply text-center;
 }
-.home .home-blog .col-12 .latest-news {
-  margin-bottom: 40px;
+.home .home-blog .latest-news {
+  @apply mb-8;
 }
+
 .home .home-blog .latest-news img {
-  float: none !important;
-  margin: 0 0 25px 0 !important;
+  @apply float-none rounded-xl ml-[25px] mb-8 shadow-lg;
 }
+
 .home .home-blog .latest-news h3 {
-  color: #000000;
-  margin: 0;
-  line-height: 2.6rem;
+  @apply mb-2 text-2xl font-bold text-wpdevs-gray1 hover:text-wpdevs-light-blue;
 }
 .home .home-blog .meta-info p {
-  font-weight: 600;
-  margin-bottom: 0;
+  @apply font-normal mt-1;
 }
 .home .home-blog .meta-info p:last-child {
-  margin-top: 5px;
+  @apply mt-3;
 }
 
 .home .home-blog .meta-info .meta-categories {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @apply flex items-center justify-center;
 }
 
 .home .home-blog .meta-info .meta-title,
 .meta-info .meta-title {
-  font-weight: 600;
-  color: #000;
+  @apply font-bold text-black;
 }
 
 .home .home-blog .meta-info .post-categories {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  list-style: none;
-  padding: 0;
-  margin: 0.5em 0;
+  @apply flex flex-wrap justify-start p-0 list-none my-2;
 }
 
 .post-categories li {
-  margin: 0 8px 0 0;
+  @apply mr-[8px];
 }
 
 .home .home-blog span,
 .home .home-blog span a {
-  color: var(--wpdevs-gray1);
-  font-weight: normal;
-  text-decoration: none;
-  margin: 0 2px 0 0;
+  @apply text-wpdevs-gray1 font-normal decoration-0 mr-2;
 }

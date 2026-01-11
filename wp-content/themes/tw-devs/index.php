@@ -7,10 +7,10 @@
     <div id="primary" class="content-area">
         <main id="main" class="site-main">
 
-            <h1>
+            <h1 class="text-4xl font-bold text-center">
                 <?php esc_html_e('Blog', 'wp-devs') ?>
             </h1>
-            <div class="container">
+            <div class="containor w-full ml-auto mr-auto flex items-center justify-between max-w-[1140px]">
                 <div class="blog-items">
                     <?php
                     if (have_posts()):

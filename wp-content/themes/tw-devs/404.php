@@ -6,7 +6,7 @@
         <main id="main" class="site-main">
 
 
-            <div class="container">
+            <div class="containor w-full ml-auto mr-auto max-w-[1140px]">
                 <div class="error-404">
                     <header>
                         <h1><?php esc_html_e('Page not Found', 'wp-dev'); ?></h1>
