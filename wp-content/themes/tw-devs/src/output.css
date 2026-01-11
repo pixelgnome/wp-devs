@@ -37,11 +37,14 @@
     --radius-md: 0.375rem;
     --radius-lg: 0.5rem;
     --radius-xl: 0.75rem;
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --color-wpdevs-deep-blue: #213c4d;
     --color-wpdevs-gray1: #7c7c7c;
     --color-wpdevs-gray2: #f7f7f7;
+    --color-wpdevs-gray3: #dddddd;
     --color-wpdevs-light-blue: #2a92d3;
     --color-wpdevs-black-blue: #001e32;
   }
@@ -397,6 +400,9 @@
   .text-white {
     color: var(--color-white);
   }
+  .text-wpdevs-deep-blue {
+    color: var(--color-wpdevs-deep-blue);
+  }
   .underline {
     text-decoration-line: underline;
   }
@@ -509,13 +515,38 @@ h5 {
   font-family: var(--font-sans);
   font-size: var(--text-xl);
   line-height: var(--leading-relaxed);
-  font-family: "Arimo", sans-serif;
 }
 .container {
   margin-right: auto;
   margin-left: auto;
   width: 100%;
-  max-width: 1140px;
+}
+@media (max-width: 575px) {
+  .container {
+    padding-inline: calc(var(--spacing) * 0);
+    padding-block: 25px;
+  }
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+    padding-inline: 15px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
 }
 #menu-main-menu {
   display: flex;
@@ -615,6 +646,35 @@ h5 {
   border-style: var(--tw-border-style);
   border-width: 8px;
   border-color: var(--color-wpdevs-black-blue);
+}
+.wpdevs-pagination {
+  display: flex;
+  justify-content: space-between;
+  padding-block: calc(var(--spacing) * 4);
+}
+.pages {
+  margin-top: calc(var(--spacing) * 5);
+  margin-top: 20px;
+}
+.nav-links {
+  margin-top: calc(var(--spacing) * 10);
+  margin-top: 40px;
+}
+.nav-links .page-numbers {
+  display: inline-block;
+  background-color: var(--color-wpdevs-gray3);
+  padding-inline: calc(var(--spacing) * 2);
+  padding-block: calc(var(--spacing) * 4);
+}
+.nav-links .current {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+.nav-links .next, .nav-links .prev {
+  background-color: transparent;
+}
+.nav-links .prev {
+  padding-left: calc(var(--spacing) * 0);
 }
 @property --tw-border-style {
   syntax: "*";

@@ -28,12 +28,39 @@ h4 {
 }
 h5 {
   @apply font-sans text-xl/relaxed;
-  font-family: "Arimo", sans-serif;
 }
 
 .container {
-  @apply w-full ml-auto mr-auto max-w-[1140px];
+  @apply w-full ml-auto mr-auto;
 }
+
+@media (max-width: 575px) {
+  .container {
+    @apply px-0 py-[25px];
+  }
+}
+@media (min-width: 576px) {
+  .container {
+    @apply max-w-[540px] px-[15px];
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    @apply max-w-[720px];
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    @apply max-w-[960px];
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    @apply max-w-[1140px];
+  }
+}
+
+/************** Navigation *****************/
 
 #menu-main-menu {
   @apply flex gap-8 justify-center items-center text-lg py-4;
@@ -50,6 +77,8 @@ h5 {
 .menu-item.current-menu-item {
   @apply font-bold;
 }
+
+/************** Home Page *****************/
 
 .home-blog .container article:first-child {
   grid-area: feat-item;
@@ -105,4 +134,30 @@ h5 {
 
 .services-item img {
   @apply rounded-xl border-8 border-wpdevs-black-blue;
+}
+
+/* Pagination */
+.wpdevs-pagination {
+  @apply flex justify-between py-4;
+}
+.pages {
+  @apply mt-5;
+  margin-top: 20px;
+}
+.nav-links {
+  @apply mt-10;
+  margin-top: 40px;
+}
+.nav-links .page-numbers {
+  @apply px-2 py-4 inline-block bg-wpdevs-gray3;
+}
+.nav-links .current {
+  @apply text-white bg-black;
+}
+.nav-links .next,
+.nav-links .prev {
+  @apply bg-transparent;
+}
+.nav-links .prev {
+  @apply pl-0;
 }

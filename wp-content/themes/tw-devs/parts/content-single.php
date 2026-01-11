@@ -1,6 +1,6 @@
  <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
      <header>
-         <h1><?php the_title(); ?></h1>
+         <h1 class="text-wpdevs-deep-blue"><?php the_title(); ?></h1>
          <div class="meta-info">
 
              <p><span class="meta-title"><?php esc_html_e('Posted on', 'wp-devs') ?></span> <?php echo get_the_date(); ?> <?php _e('by', 'wp-devs') ?> <?php the_author_posts_link(); ?></p>

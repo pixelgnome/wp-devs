@@ -59,34 +59,6 @@ Tags: one-column, custom-menu, custom-logo, featured-images, translation-ready
   padding: 20px 0 0;
 }
 
-/* Pagination */
-.wpdevs-pagination {
-  display: flex;
-  justify-content: space-between;
-}
-.pages {
-  margin-top: 20px;
-}
-.nav-links {
-  margin-top: 40px;
-}
-.nav-links .page-numbers {
-  padding: 10px 15px;
-  display: inline-block;
-  background: var(--wpdevs-gray3);
-}
-.nav-links .current {
-  background-color: #000000;
-  color: #ffffff;
-}
-.nav-links .next,
-.nav-links .prev {
-  background-color: transparent;
-}
-.nav-links .prev {
-  padding-left: 0;
-}
-
 /* WordPress Core
 -------------------------------------------------------------- */
 .alignnone {
