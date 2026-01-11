@@ -13,6 +13,24 @@
 
 @tailwind utilities;
 
+/* Headings */
+h1 {
+  @apply font-sans text-6xl/relaxed font-bold;
+}
+h2 {
+  @apply font-sans text-4xl/relaxed font-bold;
+}
+h3 {
+  @apply font-sans text-3xl/relaxed font-bold;
+}
+h4 {
+  @apply font-sans text-2xl/relaxed font-bold;
+}
+h5 {
+  @apply font-sans text-xl/relaxed;
+  font-family: "Arimo", sans-serif;
+}
+
 .container {
   @apply w-full ml-auto mr-auto max-w-[1140px];
 }
@@ -83,4 +101,8 @@
 .home .home-blog span,
 .home .home-blog span a {
   @apply text-wpdevs-gray1 font-normal decoration-0 mr-2;
+}
+
+.services-item img {
+  @apply rounded-xl border-8 border-wpdevs-black-blue;
 }

@@ -24,7 +24,7 @@
                 </div>
             </section>
             <section class="services bg-wpdevs-deep-blue p-8 text-white text-center">
-                <h2 class="text-4xl font-bold mb-12 underline underline-offset-8 decoration-2 decoration-wpdevs-light-blue">
+                <h2 class="mb-12 underline underline-offset-8 decoration-2 decoration-wpdevs-light-blue">
                     <?php esc_html_e('Services', 'wp-devs') ?>
                 </h2>
                 <div class="containor w-full ml-auto mr-auto flex items-center justify-between max-w-[1140px]">
@@ -52,7 +52,7 @@
                 </div>
             </section>
             <section class="home-blog text-center py-12">
-                <h2 class="text-4xl font-bold mb-12 underline underline-offset-8 decoration-2 decoration-wpdevs-light-blue"> <?php esc_html_e('Latest News', 'wp-devs') ?></h2>
+                <h2 class="mb-12 underline underline-offset-8 decoration-2 decoration-wpdevs-light-blue"> <?php esc_html_e('Latest News', 'wp-devs') ?></h2>
                 <div class="container grid w-full ml-auto mr-auto text-center max-w-[1140px]">
                     <?php
                     $per_page = get_theme_mod('set_per_page', 3);
