@@ -7,7 +7,7 @@
         <main id="main" class="site-main">
             <?php the_archive_title('<h1 class="archive-title">', '</h1>'); ?>
             <?php the_archive_description('<div class="archive-description">', '</div>'); ?>
-            <div class="containor w-full ml-auto mr-auto flex items-center justify-between max-w-[1140px]">
+            <div class="container flex">
                 <div class="archive-items">
                     <?php
                     if (have_posts()):

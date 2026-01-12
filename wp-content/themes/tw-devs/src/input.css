@@ -124,7 +124,7 @@ h5 {
 }
 
 .post-categories li {
-  @apply mr-[8px];
+  @apply mr-2;
 }
 
 .home .home-blog span,
@@ -165,10 +165,10 @@ h5 {
 ************** INNER PAGES *****************/
 
 /* Blog, Archive, Search */
-.blog main .container,
+/* .blog main .container,
 .archive main .container {
   @apply flex;
-}
+} */
 .blog .blog-items,
 .archive .archive-items {
   @apply pr-4 pt-0 pb-0 pl-0 flex-1;
@@ -207,87 +207,76 @@ aside.sidebar h2.wp-block-heading {
 }
 .blog h1,
 .archive h1 {
-  text-align: center;
-  margin-top: 0;
+  @apply text-center mt-0;
 }
 .archive-description {
-  text-align: center;
-  max-width: 50%;
+  @apply text-center max-w-[50%];
+
   margin: 0 auto 30px auto;
 }
 .archive-description p {
-  font-size: 85%;
+  @apply text-lg;
 }
 .home #primary > #main {
-  padding: 0;
+  @apply p-0;
 }
 #primary > #main {
-  padding: var(--wpdevs-big-padding);
+  @apply py-16 px-0;
 }
 @media screen and (max-width: 991px) {
   #primary > #main {
-    padding: var(--wpdevs-mobile-padding);
+    @apply py-5 px-0;
   }
 }
 .meta-info p {
-  margin: 0;
+  @apply m-0;
 }
 .wp-post-image {
-  float: left;
-  margin: 0 15px 10px 0;
+  @apply float-left mt-0 mr-4 mb-2 ml-0;
 }
 @media screen and (max-width: 550px) {
   .wp-post-image {
-    width: 100%;
+    @apply w-full;
   }
 }
 article {
-  display: inline-block;
-  width: 100%;
+  @apply inline-block w-full;
 }
 article.post h1,
 .search h1,
 .archive h1 {
-  font-size: 50px;
-  line-height: 4rem;
-  margin-bottom: 15px;
+  @apply text-5xl leading-12 mb-4;
 }
 article.post h2 {
-  line-height: 3rem;
-  text-transform: none;
+  @apply leading-12 normal-case;
 }
 article h2 {
-  line-height: 3rem;
-  margin-bottom: 10px;
-  text-transform: none;
+  @apply leading-12 normal-case mb-2;
 }
 article.post h3,
 article.post h4,
 article.post h5 {
-  margin-bottom: 0;
+  @apply mb-0;
 }
 .searchform input[type="text"] {
-  padding: 7px 10px;
-  border: 1px solid #c6c6c6;
+  @apply px-4 py-2 border border-black rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 w-64;
 }
 .searchform input[type="submit"] {
-  padding: 11px 10px;
-  background: #000000;
-  color: #ffffff;
-  border: none;
+  @apply bg-black hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r-md;
 }
+
 .searchform div {
-  display: flex;
+  @apply flex;
 }
 .searchform input[type="text"] {
-  max-width: 70%;
+  @apply max-w-[70%];
 }
 .searchform input[type="submit"] {
-  max-width: 70%;
+  @apply max-w-[70%];
 }
 @media (max-width: 991px) {
   .blog .container,
   .archive .container {
-    flex-wrap: wrap;
+    @apply flex-wrap;
   }
 }
