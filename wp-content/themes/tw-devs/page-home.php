@@ -12,22 +12,22 @@
             $hero_height = get_theme_mod('set_hero_height', 850);
             $hero_background = wp_get_attachment_url(get_theme_mod('set_hero_background_image'));
             ?>
-            <section class="hero text-center bg-center bg-cover text-white" style="background-image: url('<?php echo esc_url($hero_background) ?>');">
-                <div class="overlay flex bg-gray-600/30" style="min-height: <?php echo esc_attr($hero_height) ?>px;">
-                    <div class="containor w-full ml-auto mr-auto flex items-center justify-between max-w-[1140px]">
-                        <div class="hero-items justify-center align-middle py-[25px]">
-                            <h1 class="mb-4 text-4xl font-bold tracking-tight text-heading md:text-5xl lg:text-6xl "><?php echo esc_html($hero_title) ?></h1>
-                            <p class="mb-6 text-lg font-normal text-body lg:text-xl sm:px-16 xl:px-48"><?php echo nl2br(esc_html($hero_subtitle)) ?></p>
-                            <a class="inline-flex items-center text-white bg-blue-800 rounded-lg box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-base px-5 py-3 focus:outline-none" href="<?php echo esc_url($hero_button_link) ?>"><?php echo esc_html($hero_button_text) ?></a>
+            <section class="hero" style="background-image: url('<?php echo esc_url($hero_background) ?>');">
+                <div class="overlay" style="min-height: <?php echo esc_attr($hero_height) ?>px;">
+                    <div class="container">
+                        <div class="hero-items">
+                            <h1><?php echo esc_html($hero_title) ?></h1>
+                            <p><?php echo nl2br(esc_html($hero_subtitle)) ?></p>
+                            <a href="<?php echo esc_url($hero_button_link) ?>"><?php echo esc_html($hero_button_text) ?></a>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="services bg-wpdevs-deep-blue p-8 text-white text-center">
-                <h2 class="mb-12 underline underline-offset-8 decoration-2 decoration-wpdevs-light-blue">
+            <section class="services">
+                <h2>
                     <?php esc_html_e('Services', 'wp-devs') ?>
                 </h2>
-                <div class="containor w-full ml-auto mr-auto flex items-center justify-between max-w-[1140px]">
+                <div class="container">
                     <div class="services-item">
                         <?php
                         if (is_active_sidebar('services-1')) {
@@ -52,8 +52,8 @@
                 </div>
             </section>
             <section class="home-blog text-center py-12">
-                <h2 class="mb-12 underline underline-offset-8 decoration-2 decoration-wpdevs-light-blue"> <?php esc_html_e('Latest News', 'wp-devs') ?></h2>
-                <div class="container grid w-full ml-auto mr-auto text-center max-w-[1140px]">
+                <h2> <?php esc_html_e('Latest News', 'wp-devs') ?></h2>
+                <div class="container grid">
                     <?php
                     $per_page = get_theme_mod('set_per_page', 3);
                     $category_include = get_theme_mod('set_category_include');
