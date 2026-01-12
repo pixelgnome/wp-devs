@@ -399,7 +399,7 @@ img {
 
 @media (max-width: 575px) {
   .container {
-    @apply px-0 py-[25px];
+    @apply px-0 px-6;
   }
 }
 @media (min-width: 576px) {
