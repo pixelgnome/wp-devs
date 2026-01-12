@@ -15,15 +15,15 @@ Template Name: General Template
         <main id="main" class="site-main">
 
 
-            <div class="container w-full ml-auto mr-auto max-w-[1140px]">
-                <div class="general-template py-8">
+            <div class="container">
+                <div class="general-template">
 
                     <?php
                     if (have_posts()):
                         while (have_posts()): the_post();
                     ?>
                             <article>
-                                <h2 class="text-4xl font-bold mb-4"><?php the_title(); ?></h2>
+                                <h2><?php the_title(); ?></h2>
 
 
                                 <?php the_content(); ?>

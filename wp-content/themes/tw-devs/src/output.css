@@ -37,6 +37,7 @@
     --radius-md: 0.375rem;
     --radius-lg: 0.5rem;
     --radius-xl: 0.75rem;
+    --radius-2xl: 1rem;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
@@ -227,15 +228,6 @@
       max-width: 96rem;
     }
   }
-  .mr-auto {
-    margin-right: auto;
-  }
-  .mb-4 {
-    margin-bottom: calc(var(--spacing) * 4);
-  }
-  .ml-auto {
-    margin-left: auto;
-  }
   .flex {
     display: flex;
   }
@@ -245,46 +237,8 @@
   .hidden {
     display: none;
   }
-  .w-full {
-    width: 100%;
-  }
-  .max-w-\[1140px\] {
-    max-width: 1140px;
-  }
-  .items-center {
-    align-items: center;
-  }
-  .justify-between {
-    justify-content: space-between;
-  }
-  .bg-wpdevs-deep-blue {
-    background-color: var(--color-wpdevs-deep-blue);
-  }
-  .py-8 {
-    padding-block: calc(var(--spacing) * 8);
-  }
-  .py-12 {
-    padding-block: calc(var(--spacing) * 12);
-  }
-  .py-\[15px\] {
-    padding-block: 15px;
-  }
-  .text-center {
-    text-align: center;
-  }
   .font-sans {
     font-family: var(--font-sans);
-  }
-  .text-4xl {
-    font-size: var(--text-4xl);
-    line-height: var(--tw-leading, var(--text-4xl--line-height));
-  }
-  .font-bold {
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
-  }
-  .text-white {
-    color: var(--color-white);
   }
   .text-wpdevs-deep-blue {
     color: var(--color-wpdevs-deep-blue);
@@ -746,6 +700,9 @@ img {
     }
   }
 }
+.home-blog {
+  padding-block: calc(var(--spacing) * 12);
+}
 .home-blog .container article:first-child {
   grid-area: feat-item;
 }
@@ -836,6 +793,56 @@ img {
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
 }
+footer {
+  background-color: var(--color-wpdevs-deep-blue);
+  padding-block: calc(var(--spacing) * 4);
+  color: var(--color-white);
+}
+footer .container .row {
+  align-items: center;
+}
+.site-footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.site-footer .copyright p {
+  margin: calc(var(--spacing) * 0);
+  margin: 0;
+}
+.footer-menu ul {
+  margin: calc(var(--spacing) * 0);
+  list-style-type: none;
+  padding: calc(var(--spacing) * 0);
+}
+.footer-menu ul li {
+  margin-top: calc(var(--spacing) * 0);
+  margin-right: calc(var(--spacing) * 4);
+  margin-bottom: calc(var(--spacing) * 0);
+  margin-left: calc(var(--spacing) * 0);
+  display: inline;
+}
+.footer-menu ul li:last-child {
+  margin: calc(var(--spacing) * 0);
+}
+.footer-menu ul li a {
+  color: var(--color-white);
+  text-decoration-line: none;
+}
+.footer-menu ul li.current_page_item a {
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+}
+@media (max-width: 768px) {
+  .site-footer .container {
+    justify-content: safe center;
+  }
+}
+@media (max-width: 575px) {
+  .site-footer .container {
+    flex-wrap: wrap;
+  }
+}
 .services {
   background-color: var(--color-wpdevs-deep-blue);
   padding-block: calc(var(--spacing) * 15);
@@ -897,26 +904,39 @@ img {
 }
 .pages {
   margin-top: calc(var(--spacing) * 5);
-  margin-top: 20px;
 }
-.nav-links {
+.pages a {
+  border-radius: var(--radius-2xl);
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  border-color: var(--color-wpdevs-light-blue);
+  padding-inline: calc(var(--spacing) * 3);
+  padding-block: calc(var(--spacing) * 1.5);
+  &:hover {
+    @media (hover: hover) {
+      border-color: var(--color-wpdevs-deep-blue);
+    }
+  }
+}
+.post-nav-links {
   margin-top: calc(var(--spacing) * 10);
-  margin-top: 40px;
 }
-.nav-links .page-numbers {
+.post-nav-links .page-numbers {
   display: inline-block;
   background-color: var(--color-wpdevs-gray3);
   padding-inline: calc(var(--spacing) * 2);
   padding-block: calc(var(--spacing) * 4);
 }
-.nav-links .current {
-  background-color: var(--color-black);
+.post-nav-links .current {
+  border-radius: var(--radius-xl);
+  background-color: var(--color-wpdevs-gray1);
+  padding: calc(var(--spacing) * 1);
   color: var(--color-white);
 }
-.nav-links .next, .nav-links .prev {
+.post-nav-links .next, .post-nav-links .prev {
   background-color: transparent;
 }
-.nav-links .prev {
+.post-nav-links .prev {
   padding-left: calc(var(--spacing) * 0);
 }
 ************** INNER PAGES *****************/ .blog main .container, .archive main .container {
@@ -931,6 +951,26 @@ img {
 }
 .blog .blog-items h2, .archive .blog-items h2 {
   margin-top: calc(var(--spacing) * 0);
+}
+.blog .blog-items h2 a, .archive .blog-items h2 a {
+  color: var(--color-wpdevs-gray1);
+  &:hover {
+    @media (hover: hover) {
+      color: var(--color-wpdevs-light-blue);
+    }
+  }
+}
+.meta-info a {
+  margin-right: calc(var(--spacing) * 2);
+  --tw-font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-wpdevs-gray1);
+  text-decoration-thickness: 0px;
+  &:hover {
+    @media (hover: hover) {
+      color: var(--color-wpdevs-deep-blue);
+    }
+  }
 }
 .blog article, .archive article {
   margin-bottom: calc(var(--spacing) * 5);
@@ -988,6 +1028,8 @@ aside.sidebar h2.wp-block-heading {
 }
 .meta-info p {
   margin: calc(var(--spacing) * 0);
+  --tw-leading: calc(var(--spacing) * 8);
+  line-height: calc(var(--spacing) * 8);
 }
 .wp-post-image {
   float: left;
@@ -1114,11 +1156,11 @@ article.post h3, article.post h4, article.post h5 {
     flex-wrap: wrap;
   }
 }
-@property --tw-font-weight {
+@property --tw-leading {
   syntax: "*";
   inherits: false;
 }
-@property --tw-leading {
+@property --tw-font-weight {
   syntax: "*";
   inherits: false;
 }
@@ -1203,8 +1245,8 @@ article.post h3, article.post h4, article.post h5 {
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-font-weight: initial;
       --tw-leading: initial;
+      --tw-font-weight: initial;
       --tw-duration: initial;
       --tw-border-style: solid;
       --tw-tracking: initial;

@@ -1,6 +1,6 @@
   <!-- Footer -->
-  <footer class="site-footer bg-wpdevs-deep-blue text-white py-[15px]">
-      <div class="containor w-full ml-auto mr-auto flex items-center justify-between max-w-[1140px]">
+  <footer class="site-footer">
+      <div class="container">
           <div class="copyright">
               <p><?php echo esc_html(get_theme_mod('set_copyright', __('Copyright X - All Rights Reserved', 'wp-devs'))); ?></p>
           </div>

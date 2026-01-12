@@ -51,7 +51,7 @@
                     </div>
                 </div>
             </section>
-            <section class="home-blog text-center py-12">
+            <section class="home-blog">
                 <h2> <?php esc_html_e('Latest News', 'wp-devs') ?></h2>
                 <div class="container grid">
                     <?php

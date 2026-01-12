@@ -576,6 +576,10 @@ img {
 }
 
 /* Home Blog  */
+.home-blog {
+  @apply py-12;
+}
+
 .home-blog .container article:first-child {
   grid-area: feat-item;
 }
@@ -640,6 +644,48 @@ img {
   }
 }
 
+/* Footer */
+footer {
+  @apply bg-wpdevs-deep-blue text-white py-4;
+}
+footer .container .row {
+  @apply items-center;
+}
+
+/* Footer - Footer Menu */
+.site-footer .container {
+  @apply flex justify-between items-center;
+}
+.site-footer .copyright p {
+  @apply m-0;
+  margin: 0;
+}
+.footer-menu ul {
+  @apply list-none p-0 m-0;
+}
+.footer-menu ul li {
+  @apply inline mt-0 mr-4 mb-0 ml-0;
+}
+.footer-menu ul li:last-child {
+  @apply m-0;
+}
+.footer-menu ul li a {
+  @apply text-white no-underline;
+}
+.footer-menu ul li.current_page_item a {
+  @apply font-bold;
+}
+@media (max-width: 768px) {
+  .site-footer .container {
+    @apply justify-center-safe;
+  }
+}
+@media (max-width: 575px) {
+  .site-footer .container {
+    @apply flex-wrap;
+  }
+}
+
 /* Services */
 .services {
   @apply bg-wpdevs-deep-blue text-white text-center py-15;
@@ -687,23 +733,25 @@ img {
 }
 .pages {
   @apply mt-5;
-  margin-top: 20px;
 }
-.nav-links {
+
+.pages a {
+  @apply border border-wpdevs-light-blue hover:border-wpdevs-deep-blue rounded-2xl py-1.5 px-3;
+}
+.post-nav-links {
   @apply mt-10;
-  margin-top: 40px;
 }
-.nav-links .page-numbers {
+.post-nav-links .page-numbers {
   @apply px-2 py-4 inline-block bg-wpdevs-gray3;
 }
-.nav-links .current {
-  @apply text-white bg-black;
+.post-nav-links .current {
+  @apply text-white bg-wpdevs-gray1 p-1 rounded-xl;
 }
-.nav-links .next,
-.nav-links .prev {
+.post-nav-links .next,
+.post-nav-links .prev {
   @apply bg-transparent;
 }
-.nav-links .prev {
+.post-nav-links .prev {
   @apply pl-0;
 }
 
@@ -725,6 +773,16 @@ img {
 .archive .blog-items h2 {
   @apply mt-0;
 }
+
+.blog .blog-items h2 a,
+.archive .blog-items h2 a {
+  @apply text-wpdevs-gray1 hover:text-wpdevs-light-blue;
+}
+
+.meta-info a {
+  @apply text-wpdevs-gray1 hover:text-wpdevs-deep-blue font-normal decoration-0 mr-2;
+}
+
 .blog article,
 .archive article {
   @apply mb-5;
@@ -778,7 +836,7 @@ aside.sidebar h2.wp-block-heading {
   }
 }
 .meta-info p {
-  @apply m-0;
+  @apply m-0 leading-8;
 }
 .wp-post-image {
   @apply float-left mt-0 mr-4 mb-2 ml-0;
