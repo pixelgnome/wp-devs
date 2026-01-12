@@ -60,26 +60,161 @@ h5 {
   }
 }
 
-/************** Navigation *****************/
-
-#menu-main-menu {
-  @apply flex gap-8 justify-center items-center text-lg py-4;
+/************** Home Page *****************/
+/* Top Bar Section */
+.top-bar {
+  @apply bg-white text-black px-0 py-4;
 }
+.top-bar .container {
+  @apply flex items-center justify-between;
+}
+
+@media (max-width: 768px) {
+  .searchbox {
+    @apply hidden;
+  }
+  .top-bar .container {
+    @apply justify-center;
+  }
+}
+
+/* Main Menu */
+
+.menu-area {
+  @apply bg-wpdevs-gray2;
+}
+.main-menu {
+  @apply h-14 flex justify-center;
+}
+
+.main-menu ul {
+  @apply m-0 pl-0;
+}
+
+.main-menu ul li {
+  @apply inline-block leading-14 relative;
+}
+.main-menu ul li.current_page_item > a {
+  @apply font-bold;
+}
+
+.main-menu ul li a {
+  @apply text-black py-0 px-8 decoration-0 block;
+}
+.main-menu ul li a:hover,
+.main-menu ul li a:active {
+  @apply text-wpdevs-gray1 transition-all duration-500;
+}
+.main-menu ul li a:focus + ul {
+  @apply block;
+}
+.main-menu li.menu-item-has-children::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 6px);
+  width: 0px;
+  height: 0px;
+  border-top: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #000000;
+  border-left: 6px solid transparent;
+}
+.main-menu ul.sub-menu {
+  @apply absolute pl-0 bg-black z-10 text-left hidden;
+}
+.main-menu ul .menu-item-has-children:hover > ul,
+.main-menu ul .menu-item-has-children:focus + ul {
+  @apply block;
+}
+.main-menu ul.sub-menu li {
+  @apply w-max;
+}
+.main-menu ul.sub-menu a {
+  @apply text-white;
+}
+.menu-icon,
+.check-button {
+  @apply cursor-pointer hidden;
+}
+.menu-icon .bar1,
+.menu-icon .bar2,
+.menu-icon .bar3 {
+  @apply w-[28px] h-[3px] bg-wpdevs-deep-blue my-1 transition duration-400;
+}
+@media (max-width: 767px) {
+  .menu-icon,
+  .check-button {
+    @apply block;
+  }
+  .check-button {
+    @apply border-0 bg-transparent h-14;
+  }
+  .main-menu ul {
+    position: absolute;
+    width: 100%;
+    background: #000000;
+    left: -999px;
+    text-align: left;
+    transition: all cubic-bezier(0.79, 0.14, 0.15, 0.86) 0.5s;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+  }
+  .main-menu ul:not(.sub-menu) {
+    @apply mt-14;
+  }
+  .main-menu ul li {
+    display: block;
+    margin: 15px 0;
+    line-height: 30px;
+  }
+  .main-menu ul li a {
+    @apply text-white;
+  }
+  .main-menu ul.sub-menu {
+    position: relative;
+    top: 0;
+    margin-left: 30px;
+    display: block;
+    width: auto;
+  }
+  .main-menu ul.sub-menu a {
+    @apply text-wpdevs-gray1;
+  }
+
+  .show-dropdown {
+    left: 0 !important;
+  }
+
+  .animate-button .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-4px, 4px);
+    transform: rotate(-45deg) translate(-4px, 4px);
+  }
+  .animate-button .bar2 {
+    opacity: 0;
+  }
+  .animate-button .bar3 {
+    -webkit-transform: rotate(45deg) translate(-7px, -7px);
+    transform: rotate(45deg) translate(-7px, -7px);
+  }
+}
+
+/************** Navigation *****************/
 
 #menu-footer-menu {
   @apply flex gap-8 py-4;
 }
-
+/*
 .menu-item {
   @apply font-normal;
 }
 
 .menu-item.current-menu-item {
   @apply font-bold;
-}
+} */
 
-/************** Home Page *****************/
-
+/* Home Blog  */
 .home-blog .container article:first-child {
   grid-area: feat-item;
 }
@@ -165,19 +300,23 @@ h5 {
 ************** INNER PAGES *****************/
 
 /* Blog, Archive, Search */
-/* .blog main .container,
+
+.blog main .container,
 .archive main .container {
-  @apply flex;
-} */
+  display: flex;
+}
+
 .blog .blog-items,
 .archive .archive-items {
-  @apply pr-4 pt-0 pb-0 pl-0 flex-1;
+  @apply pt-0 pr-3 pb-2 pl-0 flex-1;
 }
+
 .blog .blog-items h2,
 .archive .blog-items h2 {
   @apply mt-0;
 }
-.blog article {
+.blog article,
+.archive article {
   @apply mb-5;
 }
 .blog aside,
@@ -258,6 +397,15 @@ article.post h4,
 article.post h5 {
   @apply mb-0;
 }
+
+.wp-block-search__input {
+  @apply bg-white border border-black rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+}
+
+.wp-block-search__button {
+  @apply bg-black hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md;
+}
+
 .searchform input[type="text"] {
   @apply px-4 py-2 border border-black rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 w-64;
 }

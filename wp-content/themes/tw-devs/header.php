@@ -16,8 +16,8 @@
     ?>
     <div id="page" class="site font-sans">
         <header>
-            <section class="top-bar bg-white text-black py-[15px]">
-                <div class="container flex items-center justify-between">
+            <section class="top-bar">
+                <div class="container">
                     <div class="logo">
                         <?php
                         if (has_custom_logo()) {
@@ -36,7 +36,7 @@
 
             </section>
             <?php if (! is_page('landing-page')): ?>
-                <section class="menu-area h-[55px] bg-wpdevs-gray2">
+                <section class="menu-area">
                     <div class="container">
                         <nav class="main-menu">
                             <button class="check-button">
