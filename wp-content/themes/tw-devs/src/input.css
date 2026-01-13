@@ -5,6 +5,7 @@
   --color-wpdevs-gray1: #7c7c7c;
   --color-wpdevs-gray2: #f7f7f7;
   --color-wpdevs-gray3: #dddddd;
+  --color-wpdevs-gray4: #c6c6c6;
   --color-wpdevs-light-blue: #2a92d3;
   --color-wpdevs-deep-blue: #213c4d;
   --color-wpdevs-black-blue: #001e32;
@@ -564,7 +565,7 @@ img {
   @apply flex bg-gray-600/30 items-center justify-center;
 }
 .hero .hero-items h1 {
-  @apply mb-4 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl;
+  @apply mb-4 font-bold tracking-tight text-6xl;
 }
 
 .hero .hero-items p {
@@ -645,10 +646,10 @@ img {
 }
 
 /* Footer */
-footer {
+.site-footer {
   @apply bg-wpdevs-deep-blue text-white py-4;
 }
-footer .container .row {
+.site-footer .container .row {
   @apply items-center;
 }
 
@@ -741,15 +742,15 @@ footer .container .row {
 .post-nav-links {
   @apply mt-10;
 }
-.post-nav-links .page-numbers {
-  @apply px-2 py-4 inline-block bg-wpdevs-gray3;
+.post-nav-links .post-page-numbers {
+  @apply px-2 inline-block border border-wpdevs-gray4 rounded-sm;
 }
+
 .post-nav-links .current {
-  @apply text-white bg-wpdevs-gray1 p-1 rounded-xl;
+  @apply text-white bg-wpdevs-deep-blue;
 }
 .post-nav-links .next,
 .post-nav-links .prev {
-  @apply bg-transparent;
 }
 .post-nav-links .prev {
   @apply pl-0;
@@ -757,15 +758,17 @@ footer .container .row {
 
 /************** INNER PAGES *****************/
 
-.general-template {
+.general-template,
+.page-item {
   @apply py-12;
 }
 
-.general-template article h2 {
+.general-template article h2,
+.page-item article h2 {
   @apply text-wpdevs-deep-blue mb-5;
 }
 
-.general-template article p,
+.general-template article p .page-item article p,
 article p {
   @apply block mb-2 leading-8;
 }
@@ -930,5 +933,28 @@ article.post h5 {
 }
 
 .error-404 .widget_recent_entries {
+  @apply my-5;
+}
+
+/* Comments */
+#commentform input[type="submit"] {
+  @apply text-white py-3 px-6 my-5 inline-block bg-wpdevs-light-blue hover:bg-wpdevs-deep-blue border-0 transition duration-300 rounded-md;
+}
+
+#commentform label {
+  @apply block;
+}
+#commentform label[for="wp-comment-cookies-consent"] {
+  @apply inline ml-1;
+}
+#commentform input[type="text"],
+#commentform textarea {
+  @apply py-3 px-4 border border-wpdevs-gray4 w-full rounded-sm;
+}
+.comments-area #reply-title {
+  @apply border-t border-wpdevs-gray4 pt-5;
+}
+
+.comment-list {
   @apply my-5;
 }

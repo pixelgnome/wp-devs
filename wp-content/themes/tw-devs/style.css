@@ -13,52 +13,6 @@ Text Domain: wp-devs
 Tags: one-column, custom-menu, custom-logo, featured-images, translation-ready
 */
 
-.menu-icon,
-.check-button {
-  cursor: pointer;
-  display: none;
-}
-.menu-icon .bar1,
-.menu-icon .bar2,
-.menu-icon .bar3 {
-  width: 28px;
-  height: 3px;
-  background-color: #333;
-  margin: 5px 0;
-  transition: 0.4s;
-}
-
-/* Comments */
-#commentform input[type="submit"] {
-  color: #ffffff;
-  padding: 15px 25px;
-  display: inline-block;
-  background: var(--wpdevs-light-blue);
-  margin: 20px 0 0;
-  border: none;
-}
-#commentform input[type="submit"]:hover {
-  background: var(--wpdevs-yellow);
-  transition: 0.5s all;
-}
-#commentform label {
-  display: block;
-}
-#commentform label[for="wp-comment-cookies-consent"] {
-  display: inline;
-  margin-left: 5px;
-}
-#commentform input[type="text"],
-#commentform textarea {
-  padding: 7px 10px;
-  border: 1px solid #c6c6c6;
-  width: 100%;
-}
-.comments-area #reply-title {
-  border-top: 1px solid #ebebeb;
-  padding: 20px 0 0;
-}
-
 /* WordPress Core
 -------------------------------------------------------------- */
 .alignnone {
