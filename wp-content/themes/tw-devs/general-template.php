@@ -16,7 +16,7 @@ Template Name: General Template
 
 
             <div class="container">
-                <div class="general-template">
+                <div class="general-template py-12">
 
                     <?php
                     if (have_posts()):

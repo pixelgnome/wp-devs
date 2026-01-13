@@ -23,16 +23,18 @@
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-3xl: 1.875rem;
-    --text-3xl--line-height: calc(2.25 / 1.875);
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
     --text-6xl: 3.75rem;
     --text-6xl--line-height: 1;
+    --text-8xl: 6rem;
+    --text-8xl--line-height: 1;
     --font-weight-normal: 400;
     --font-weight-bold: 700;
     --tracking-tight: -0.025em;
+    --leading-snug: 1.375;
     --leading-relaxed: 1.625;
     --radius-md: 0.375rem;
     --radius-lg: 0.5rem;
@@ -236,6 +238,9 @@
   }
   .hidden {
     display: none;
+  }
+  .py-12 {
+    padding-block: calc(var(--spacing) * 12);
   }
   .font-sans {
     font-family: var(--font-sans);
@@ -725,21 +730,18 @@ img {
 }
 .home .home-blog .latest-news h3 {
   margin-bottom: calc(var(--spacing) * 2);
+  font-size: var(--text-4xl);
+  line-height: var(--tw-leading, var(--text-4xl--line-height));
   --tw-font-weight: var(--font-weight-bold);
   font-weight: var(--font-weight-bold);
-  color: var(--color-wpdevs-gray1);
-  &:hover {
-    @media (hover: hover) {
-      color: var(--color-wpdevs-light-blue);
-    }
-  }
-  @media (width >= 48rem) {
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
-  }
 }
 .home .home-blog .latest-news h3 a {
   color: var(--color-wpdevs-gray1);
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
   &:hover {
     @media (hover: hover) {
       color: var(--color-wpdevs-light-blue);
@@ -766,6 +768,7 @@ img {
 }
 .home .home-blog .meta-info .post-categories {
   margin-block: calc(var(--spacing) * 2);
+  margin-left: calc(var(--spacing) * 1);
   display: flex;
   list-style-type: none;
   flex-wrap: wrap;
@@ -776,7 +779,6 @@ img {
   margin-right: calc(var(--spacing) * 2);
 }
 .home .home-blog span, .home .home-blog span a {
-  margin-right: calc(var(--spacing) * 2);
   --tw-font-weight: var(--font-weight-normal);
   font-weight: var(--font-weight-normal);
   color: var(--color-wpdevs-gray1);
@@ -880,6 +882,8 @@ footer .container .row {
   position: relative;
   margin-bottom: calc(var(--spacing) * 12);
   text-align: center;
+  font-size: var(--text-5xl);
+  line-height: var(--tw-leading, var(--text-5xl--line-height));
   text-decoration-line: underline;
   text-decoration-color: var(--color-wpdevs-light-blue);
   text-decoration-thickness: 2px;
@@ -912,6 +916,11 @@ footer .container .row {
   border-color: var(--color-wpdevs-light-blue);
   padding-inline: calc(var(--spacing) * 3);
   padding-block: calc(var(--spacing) * 1.5);
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
   &:hover {
     @media (hover: hover) {
       border-color: var(--color-wpdevs-deep-blue);
@@ -939,21 +948,39 @@ footer .container .row {
 .post-nav-links .prev {
   padding-left: calc(var(--spacing) * 0);
 }
-************** INNER PAGES *****************/ .blog main .container, .archive main .container {
+.general-template {
+  padding-block: calc(var(--spacing) * 12);
+}
+.general-template article h2 {
+  margin-bottom: calc(var(--spacing) * 5);
+  color: var(--color-wpdevs-deep-blue);
+}
+.general-template article p, article p {
+  margin-bottom: calc(var(--spacing) * 2);
+  display: block;
+  --tw-leading: calc(var(--spacing) * 8);
+  line-height: calc(var(--spacing) * 8);
+}
+.blog main .container, .archive main .container {
   display: flex;
 }
 .blog .blog-items, .archive .archive-items {
   flex: 1;
   padding-top: calc(var(--spacing) * 0);
-  padding-right: calc(var(--spacing) * 3);
+  padding-right: calc(var(--spacing) * 4);
   padding-bottom: calc(var(--spacing) * 2);
   padding-left: calc(var(--spacing) * 0);
 }
 .blog .blog-items h2, .archive .blog-items h2 {
   margin-top: calc(var(--spacing) * 0);
 }
-.blog .blog-items h2 a, .archive .blog-items h2 a {
+.blog .blog-items h2 a, .archive .archive-items h2 a, .search article h2 a {
   color: var(--color-wpdevs-gray1);
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
   &:hover {
     @media (hover: hover) {
       color: var(--color-wpdevs-light-blue);
@@ -961,7 +988,6 @@ footer .container .row {
   }
 }
 .meta-info a {
-  margin-right: calc(var(--spacing) * 2);
   --tw-font-weight: var(--font-weight-normal);
   font-weight: var(--font-weight-normal);
   color: var(--color-wpdevs-gray1);
@@ -1018,7 +1044,7 @@ aside.sidebar h2.wp-block-heading {
 }
 #primary > #main {
   padding-inline: calc(var(--spacing) * 0);
-  padding-block: calc(var(--spacing) * 16);
+  padding-block: calc(var(--spacing) * 0);
 }
 @media screen and (max-width: 991px) {
   #primary > #main {
@@ -1037,6 +1063,9 @@ aside.sidebar h2.wp-block-heading {
   margin-right: calc(var(--spacing) * 4);
   margin-bottom: calc(var(--spacing) * 2);
   margin-left: calc(var(--spacing) * 0);
+  border-radius: var(--radius-xl);
+  --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
 }
 @media screen and (max-width: 550px) {
   .wp-post-image {
@@ -1048,11 +1077,14 @@ article {
   width: 100%;
 }
 article.post h1, .search h1, .archive h1 {
-  margin-bottom: calc(var(--spacing) * 4);
   font-size: var(--text-5xl);
-  line-height: var(--tw-leading, var(--text-5xl--line-height));
-  --tw-leading: calc(var(--spacing) * 12);
-  line-height: calc(var(--spacing) * 12);
+  line-height: var(--leading-snug);
+}
+.search .container article {
+  margin-bottom: calc(var(--spacing) * 7);
+}
+.search .searchform {
+  margin-bottom: calc(var(--spacing) * 7);
 }
 article.post h2 {
   --tw-leading: calc(var(--spacing) * 12);
@@ -1097,6 +1129,11 @@ article.post h3, article.post h4, article.post h5 {
   --tw-font-weight: var(--font-weight-bold);
   font-weight: var(--font-weight-bold);
   color: var(--color-white);
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
   &:hover {
     @media (hover: hover) {
       background-color: var(--color-blue-700);
@@ -1136,6 +1173,11 @@ article.post h3, article.post h4, article.post h5 {
   --tw-font-weight: var(--font-weight-bold);
   font-weight: var(--font-weight-bold);
   color: var(--color-white);
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
   &:hover {
     @media (hover: hover) {
       background-color: var(--color-blue-700);
@@ -1155,6 +1197,22 @@ article.post h3, article.post h4, article.post h5 {
   .blog .container, .archive .container {
     flex-wrap: wrap;
   }
+}
+.error-404 {
+  padding-block: calc(var(--spacing) * 12);
+}
+.error-404 h1 {
+  @media (width >= 48rem) {
+    font-size: var(--text-6xl);
+    line-height: var(--tw-leading, var(--text-6xl--line-height));
+  }
+  @media (width >= 64rem) {
+    font-size: var(--text-8xl);
+    line-height: var(--tw-leading, var(--text-8xl--line-height));
+  }
+}
+.error-404 .widget_recent_entries {
+  margin-block: calc(var(--spacing) * 5);
 }
 @property --tw-leading {
   syntax: "*";

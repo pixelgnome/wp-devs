@@ -598,11 +598,11 @@ img {
 }
 
 .home .home-blog .latest-news h3 {
-  @apply mb-2 md:text-3xl font-bold text-wpdevs-gray1 hover:text-wpdevs-light-blue;
+  @apply mb-2 text-4xl font-bold;
 }
 
 .home .home-blog .latest-news h3 a {
-  @apply text-wpdevs-gray1 hover:text-wpdevs-light-blue;
+  @apply transition duration-300 text-wpdevs-gray1 hover:text-wpdevs-light-blue;
 }
 
 .home .home-blog .meta-info p {
@@ -622,7 +622,7 @@ img {
 }
 
 .home .home-blog .meta-info .post-categories {
-  @apply flex flex-wrap justify-start p-0 list-none my-2;
+  @apply flex flex-wrap justify-start p-0 list-none my-2 ml-1;
 }
 
 .post-categories li {
@@ -631,7 +631,7 @@ img {
 
 .home .home-blog span,
 .home .home-blog span a {
-  @apply text-wpdevs-gray1 font-normal decoration-0 mr-2;
+  @apply text-wpdevs-gray1 font-normal decoration-0;
 }
 
 @media (max-width: 768px) {
@@ -712,7 +712,7 @@ footer .container .row {
 }
 .services h2,
 .home-blog h2 {
-  @apply text-center relative mb-12 underline underline-offset-8 decoration-2 decoration-wpdevs-light-blue;
+  @apply text-5xl text-center relative mb-12 underline underline-offset-8 decoration-2 decoration-wpdevs-light-blue;
 }
 
 .services h4 {
@@ -736,7 +736,7 @@ footer .container .row {
 }
 
 .pages a {
-  @apply border border-wpdevs-light-blue hover:border-wpdevs-deep-blue rounded-2xl py-1.5 px-3;
+  @apply transition duration-300 border border-wpdevs-light-blue hover:border-wpdevs-deep-blue rounded-2xl py-1.5 px-3;
 }
 .post-nav-links {
   @apply mt-10;
@@ -755,7 +755,20 @@ footer .container .row {
   @apply pl-0;
 }
 
-************** INNER PAGES *****************/
+/************** INNER PAGES *****************/
+
+.general-template {
+  @apply py-12;
+}
+
+.general-template article h2 {
+  @apply text-wpdevs-deep-blue mb-5;
+}
+
+.general-template article p,
+article p {
+  @apply block mb-2 leading-8;
+}
 
 /* Blog, Archive, Search */
 
@@ -766,7 +779,7 @@ footer .container .row {
 
 .blog .blog-items,
 .archive .archive-items {
-  @apply pt-0 pr-3 pb-2 pl-0 flex-1;
+  @apply pt-0 pr-4 pb-2 pl-0 flex-1;
 }
 
 .blog .blog-items h2,
@@ -775,12 +788,13 @@ footer .container .row {
 }
 
 .blog .blog-items h2 a,
-.archive .blog-items h2 a {
-  @apply text-wpdevs-gray1 hover:text-wpdevs-light-blue;
+.archive .archive-items h2 a,
+.search article h2 a {
+  @apply transition duration-300 text-wpdevs-gray1 hover:text-wpdevs-light-blue;
 }
 
 .meta-info a {
-  @apply text-wpdevs-gray1 hover:text-wpdevs-deep-blue font-normal decoration-0 mr-2;
+  @apply text-wpdevs-gray1 hover:text-wpdevs-deep-blue font-normal decoration-0;
 }
 
 .blog article,
@@ -828,7 +842,7 @@ aside.sidebar h2.wp-block-heading {
   @apply p-0;
 }
 #primary > #main {
-  @apply py-16 px-0;
+  @apply py-0 px-0;
 }
 @media screen and (max-width: 991px) {
   #primary > #main {
@@ -839,7 +853,7 @@ aside.sidebar h2.wp-block-heading {
   @apply m-0 leading-8;
 }
 .wp-post-image {
-  @apply float-left mt-0 mr-4 mb-2 ml-0;
+  @apply float-left mt-0 mr-4 mb-2 ml-0 rounded-xl shadow;
 }
 @media screen and (max-width: 550px) {
   .wp-post-image {
@@ -852,8 +866,17 @@ article {
 article.post h1,
 .search h1,
 .archive h1 {
-  @apply text-5xl leading-12 mb-4;
+  @apply text-5xl/snug;
 }
+
+.search .container article {
+  @apply mb-7;
+}
+
+.search .searchform {
+  @apply mb-7;
+}
+
 article.post h2 {
   @apply leading-12 normal-case;
 }
@@ -871,14 +894,14 @@ article.post h5 {
 }
 
 .wp-block-search__button {
-  @apply bg-black hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md;
+  @apply transition duration-300 bg-black hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md;
 }
 
 .searchform input[type="text"] {
   @apply px-4 py-2 border border-black rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 w-64;
 }
 .searchform input[type="submit"] {
-  @apply bg-black hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r-md;
+  @apply transition duration-300 bg-black hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r-md;
 }
 
 .searchform div {
@@ -895,4 +918,17 @@ article.post h5 {
   .archive .container {
     @apply flex-wrap;
   }
+}
+
+/* 404 page */
+.error-404 {
+  @apply py-12;
+}
+
+.error-404 h1 {
+  @apply lg:text-8xl md:text-6xl;
+}
+
+.error-404 .widget_recent_entries {
+  @apply my-5;
 }
